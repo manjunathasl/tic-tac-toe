@@ -130,7 +130,7 @@ public class GameService {
         var opponent = player == 'X' ? 'O' : 'X';
         Character[] vs = new Character[]{player, opponent};
 
-        int bestScore = -1000;
+        int bestScore = -1000000;
         PointDTO position = null;
         for (int i = 0; i < n; i++) {
             for (int j = 0; j < n; j++) {
@@ -158,7 +158,7 @@ public class GameService {
         var n = board[0].length;
 
         if (isMaximizing) {
-            int bestScore = -1000;
+            int bestScore = -1000000;
             for (int i = 0; i < n; i++) {
                 for (int j = 0; j < n; j++) {
                     if (board[i][j] == Character.valueOf(' ')) {
@@ -172,7 +172,7 @@ public class GameService {
             return bestScore;
 
         } else {
-            int bestScore = 1000;
+            int bestScore = 1000000;
             for (int i = 0; i < n; i++) {
                 for (int j = 0; j < n; j++) {
                     if (board[i][j] == Character.valueOf(' ')) {
