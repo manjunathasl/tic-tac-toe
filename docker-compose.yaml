@@ -1,0 +1,28 @@
+version: '3'
+services:
+  web:
+    build: ./tictactoe-web/
+    ports:
+      - '80:80'
+    networks:
+      - tictactoe-webapp-network
+  api:
+    build: ./tictactoe/
+    networks:
+      - tictactoe-webapp-network
+  mongodb:
+    container_name: mongodb
+    image: mongo:4.4.6
+    volumes:
+      - ~/mongo:/data/db
+    ports:
+      - "27017:27017"
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=admin
+      - MONGO_INITDB_ROOT_PASSWORD=admin
+      - MONGO_INITDB_DATABASE=admin
+    networks:
+      - tictactoe-webapp-network
+networks:
+  tictactoe-webapp-network:
+    driver: bridge
