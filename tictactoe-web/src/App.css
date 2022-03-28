@@ -1,0 +1,132 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+.align-center {
+  display: flex;
+}
+
+.content-box {
+  min-width: 400px;
+  min-height: 200px;
+  padding: 20px;
+}
+
+input:disabled, select:disabled, button:disabled{
+  opacity: 1;
+  background-color: #e9ecef;
+}
+.board{
+  display: inline-block;
+}
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  border-left: 1px solid #dee2e6;
+  border-top: 1px solid #dee2e6;
+  
+}
+.row:last-child {
+  border-bottom: 1px solid #dee2e6;
+}
+.col {
+  flex: 1;
+  display: inline;
+  border-right:  1px solid #dee2e6;
+  padding: 5px;
+}
+.col-hover:hover {
+  background-color: #607091;
+}
+
+.item-cntr {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;  
+}
+
+.item {
+  flex: 1 1 auto;
+  padding: 5px;
+}
+
+button {
+  display: inline-block;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #212529;
+  text-align: center;
+  text-decoration: none;
+  vertical-align: middle;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+  background-color: transparent;
+  border: 1px solid transparent;
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  border-radius: 0.25rem;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  color: #0d6efd;
+  border-color: #0d6efd;
+}
+button:hover {
+  color: #fff;
+  background-color: #0d6efd;
+  border-color: #0d6efd;
+}
+
+.ele-margin {
+  margin-top: 20px;
+}
+
+.active-player {
+  animation: blinker 1s linear infinite;
+  border: 1px solid greenyellow;
+  font-weight: bold;
+}
+.winner {
+  animation: blinker 1s linear infinite;
+  color: green;
+  font-weight: bold;
+}
+
+.winner-player {
+  border: 2px solid green;
+}
+
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
+}
+
+

@@ -1,0 +1,10 @@
+server:
+  port: 9091
+spring:
+  application:
+    name: Tic Toc Toe game service
+  data:
+    mongodb:
+      host: localhost
+      port: 27017
+      database: tiktactoe
